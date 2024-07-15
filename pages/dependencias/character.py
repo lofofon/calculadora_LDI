@@ -1,6 +1,7 @@
 
 class Character:
-    def __init__(self, race_multiplier, qi_control) -> None:
+    def __init__(self, character_name, race_multiplier, qi_control) -> None:
+        self.character_name = character_name
         self.race_multiplier = race_multiplier
         self.qi_control = qi_control
 
