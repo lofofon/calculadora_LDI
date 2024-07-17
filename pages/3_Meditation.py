@@ -51,7 +51,7 @@ for char in selected_characters:
 
                 col1, col2 = st.columns([3, 1])
                 with col1:
-                    new_count = st.number_input("Quantidade de Horas com esse bônus", min_value=0, max_value=99, value=count, step=1, key=f"{char_id}_{key}")
+                    new_count = st.number_input("Quantidade de Horas com esse bônus", min_value=0, max_value=1000, value=count, step=1, key=f"{char_id}_{key}")
                     update_bonus_counts(char_id, key, new_count)
                 with col2:
                     st.write(f"{key}")
@@ -79,7 +79,7 @@ for char in selected_characters:
             if duration<= total_meditation_time:
                 total_bonus = duration*extra_bonuses[bonus]
             else:
-                total_bonus = duration*total_meditation_time
+                total_bonus = total_meditation_time*extra_bonuses[bonus]
 
             total_meditation_value+= total_bonus
 
